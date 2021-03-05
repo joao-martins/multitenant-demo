@@ -12,7 +12,6 @@ data class Customer(
     @GeneratedValue(strategy = AUTO)
     val id: UUID?,
 
-    val name: String,
+    val name: String
 
-    val tenantId: String
-)
+) : TenantSupport()

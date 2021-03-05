@@ -14,10 +14,8 @@ class CustomerController(
     val getAllCustomers: GetAllCustomers
 ) {
     @GetMapping
-    fun get() =
-        getAllCustomers.call()
+    fun get() = getAllCustomers.call()
 
     @PostMapping
-    fun post(@RequestBody customer: Customer) =
-        createNewCustomer.call(customer)
+    fun post(@RequestBody customer: Customer) = createNewCustomer.call(customer)
 }
